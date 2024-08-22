@@ -27,5 +27,5 @@ setuptools==65.7.0
 six
 SQLAlchemy==2.0.25
 urllib3
-Werkzeug==3.0.1
+Werkzeug==2.2.2
 WTForms
