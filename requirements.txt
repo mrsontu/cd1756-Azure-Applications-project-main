@@ -1,7 +1,7 @@
 alembic
 azure-common
 pyOpenSSL
-azure-storage-blob==12.19.0
+azure-storage-blob===2.1.0
 certifi
 cffi
 chardet
