@@ -11,7 +11,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from FlaskWebProject import app, db, login
 
 blob_container = app.config['BLOB_CONTAINER']
-blob_service = BlobServiceClient.from_connection_string(app.config['BLOB_CONNECTION_STRING'])
+storage_url = "https://{}.blob.core.windows.net/".format(app.config['BLOB_ACCOUNT'])
+blob_service = BlobServiceClient(account_url=storage_url, credential=app.config['BLOB_STORAGE_KEY'])
 # BlockBlobService(account_name=app.config['BLOB_ACCOUNT'], account_key=app.config['BLOB_STORAGE_KEY'])
 
 
